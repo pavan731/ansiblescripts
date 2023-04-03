@@ -2,7 +2,7 @@
 
 
 - name: launch ec2 with ansible
-  hosts: 3.92.193.252
+  hosts: "instane ip address"
   connection: local
   tasks:
     - name: start an instance
