@@ -1,0 +1,23 @@
+
+
+
+- name: launch ec2 with ansible
+  hosts: 3.92.193.252
+  connection: local
+  tasks:
+    - name: start an instance
+      amazon.aws.ec2_instance:
+        name:"ec2 with ansi"
+        key_name: ansible
+        vpc_subnet_id: subnet-00bf28991f9ed4657
+        region: us-east-1
+        instance_type: t2.micro
+        security_group: ancible-sg
+        network:
+          assign_public_ip: true
+        image_id: ami-007855ac798b5175e
+        aws_access_key: AKIA22MVR2PLIIH256E2
+        aws_secret_key: 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
+        count: 1
+
+*need to get the access key from IAM user connected to a group
