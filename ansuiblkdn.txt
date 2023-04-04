@@ -16,8 +16,8 @@
         network:
           assign_public_ip: true
         image_id: ami-007855ac798b5175e
-        aws_access_key: AKIA22MVR2PLIIH256E2
-        aws_secret_key: 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
+        aws_access_key: Access key from IAM
+        aws_secret_key: secret key from IAM
         count: 1
 
 *need to get the access key from IAM user connected to a group
