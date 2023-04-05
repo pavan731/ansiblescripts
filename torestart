@@ -1,0 +1,19 @@
+- name: launch ec2 with ansible
+  hosts: 18.214.99.9
+  connection: local
+  tasks:
+    - name: restart a particular instance by its ID
+      amazon.aws.ec2_instance:
+        key_name: "ansi-KP"
+        vpc_subnet_id: subnet-05bc8f0f6e0384471
+        region: us-east-1
+        instance_type: t2.micro
+        security_group: ansi-SG
+        network:
+          assign_public_ip: true
+        image_id: ami-007855ac798b5175e
+        aws_access_key: AKIAZXLKBIKABGPQTP4K
+        aws_secret_key: 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
+        state: restarted
+        instance_ids:
+          - i-043dde21940323bf8
